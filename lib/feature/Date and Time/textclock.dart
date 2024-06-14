@@ -10,12 +10,12 @@ class TimeClock extends StatefulWidget {
 }
 
 class _TimeClockState extends State<TimeClock> {
+  Timer? timer;
 
-   Timer? timer;
-  
   @override
   void initState() {
-    timer = Timer.periodic(const Duration(seconds: 1), (Timer t) => setState(() {}));
+    timer = Timer.periodic(
+        const Duration(seconds: 1), (Timer t) => setState(() {}));
     super.initState();
   }
 
@@ -24,14 +24,15 @@ class _TimeClockState extends State<TimeClock> {
     timer!.cancel();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
-    return  GestureDetector(
-                  // onTap: () => PlatformIntents.launchAlarmClockIntent(),
-                  child: Text(
-                    TimeOfDay.now().format(context),
-                    style: const TextStyle(fontSize: 32, fontWeight: FontWeight.w500),
-                  ),
-                );
+    return GestureDetector(
+      // onTap: () => PlatformIntents.launchAlarmClockIntent(),
+      child: Text(
+        TimeOfDay.now().format(context),
+        style: const TextStyle(fontSize: 32, fontWeight: FontWeight.w500),
+      ),
+    );
   }
 }
