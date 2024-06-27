@@ -17,6 +17,9 @@ samples, guidance on mobile development, and a full API reference.
 
 # Basic Functionality 
 To-do list 
+
 Api Generated a Quote to motivate
+
 Essential Apps connected like:
+
 Calculator, Phone, Calendar 
